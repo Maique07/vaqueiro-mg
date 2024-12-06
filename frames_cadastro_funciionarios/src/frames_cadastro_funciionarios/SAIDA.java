@@ -6,6 +6,7 @@ package frames_cadastro_funciionarios;
 
 import controle.controleacesso;
 import frames_cadastro_funciionarios.funcionario;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 /**
@@ -29,7 +30,9 @@ public class SAIDA extends javax.swing.JFrame {
     }
     private void exibirlista(){
       ArrayList<funcionario> Lista = c.exibirlista(); 
-       
+       for (funcionario f : Lista) {
+           System.out.println(f.getNome());
+       }
            
           for(int i =0; i < 500; i++){
               tabela.setValueAt("",i,0);
@@ -38,9 +41,9 @@ public class SAIDA extends javax.swing.JFrame {
               tabela.setValueAt("",i,3);    
             }
           for(int i =0; i < Lista.size() && Lista.get(i) != null ; i++){ 
-          
+          SimpleDateFormat form = new SimpleDateFormat("dd/MM/yyyy");
               tabela.setValueAt(Lista.get(i).getNome(), i,0);
-              tabela.setValueAt(Lista.get(i).getDataAdmissao(), i,1);
+              tabela.setValueAt(form.format(Lista.get(i).getDataAdmissao()), i,1);
               tabela.setValueAt(Lista.get(i).getValor_horas(), i,2);
               tabela.setValueAt(Lista.get(i).getHoras_trabalhadas(), i,3);
                
@@ -63,7 +66,7 @@ public class SAIDA extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -587,9 +590,14 @@ public class SAIDA extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tabela);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 280));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 280));
 
         jButton1.setText("voltar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, -1, -1));
 
         jButton2.setText("finalizar");
@@ -597,6 +605,10 @@ public class SAIDA extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -20,7 +20,6 @@ public class cadastro extends javax.swing.JFrame {
 
     controleacesso c = new controleacesso();
     SimpleDateFormat form = new SimpleDateFormat("dd/MM/yyyy");
-    funcionario f = new funcionario();
     String Adm = null;
 
     /**
@@ -30,6 +29,8 @@ public class cadastro extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setResizable(false);
+        jPanel2.setVisible(false);
+        jPanel1.setVisible(true);
 
     }
 
@@ -42,6 +43,10 @@ public class cadastro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         Nome = new javax.swing.JTextField();
@@ -61,6 +66,31 @@ public class cadastro extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Serif", 3, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 255, 51));
+        jLabel1.setText("CADASTRO DE FUNCIONÁRIOS");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 360, 50));
+
+        jButton1.setFont(new java.awt.Font("Segoe UI Emoji", 3, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 255, 0));
+        jButton1.setText("COMEÇAR ");
+        jButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 110, 40));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/figuras/fundo_vermelho.jpg"))); // NOI18N
+        jLabel2.setAutoscrolls(true);
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 300));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 360));
 
         jPanel2.setMinimumSize(new java.awt.Dimension(500, 370));
         jPanel2.setPreferredSize(new java.awt.Dimension(400, 300));
@@ -131,7 +161,7 @@ public class cadastro extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, 70, -1));
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, 70, -1));
 
         jButton4.setText("SALVAR");
         jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -145,18 +175,27 @@ public class cadastro extends javax.swing.JFrame {
 
         Htrabalhada.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Htrabalhada.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
+        Htrabalhada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HtrabalhadaActionPerformed(evt);
+            }
+        });
         Htrabalhada.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 HtrabalhadaKeyPressed(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                HtrabalhadaKeyTyped(evt);
+            }
         });
         jPanel2.add(Htrabalhada, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 210, 30));
 
-        VHtrabalhada.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        VHtrabalhada.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
         VHtrabalhada.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 VHtrabalhadaKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                VHtrabalhadaKeyTyped(evt);
             }
         });
         jPanel2.add(VHtrabalhada, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 202, 210, 30));
@@ -178,7 +217,7 @@ public class cadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        SAIDA s = new SAIDA();
+        SAIDA s = new SAIDA(c);
         s.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -189,6 +228,7 @@ public class cadastro extends javax.swing.JFrame {
         Adm = D_admissao.getText();
         String VHT = VHtrabalhada.getText();
         String HT = Htrabalhada.getText();
+        funcionario f = new funcionario();
         if (nome.isBlank()) {
             JOptionPane.showMessageDialog(null, "Por favor, informe seu nome");
             label.setForeground(Color.red);
@@ -237,7 +277,7 @@ public class cadastro extends javax.swing.JFrame {
             if (c.Salvar(f)) {
                 JOptionPane.showMessageDialog(null, "cadastro realizado");
                 Nome.setText(" ");
-                D_admissao.setText(" ");
+                D_admissao.setValue(null);
                 VHtrabalhada.setText(" ");
                 Htrabalhada.setText(" ");
                 Nome.requestFocus(); 
@@ -261,17 +301,38 @@ public class cadastro extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_D_admissaoKeyPressed
 
-    private void VHtrabalhadaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VHtrabalhadaKeyPressed
-       if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            Htrabalhada.requestFocus();
-        }
-    }//GEN-LAST:event_VHtrabalhadaKeyPressed
-
     private void HtrabalhadaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_HtrabalhadaKeyPressed
        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             Nome.requestFocus();
         }
     }//GEN-LAST:event_HtrabalhadaKeyPressed
+
+    private void VHtrabalhadaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VHtrabalhadaKeyPressed
+        
+    }//GEN-LAST:event_VHtrabalhadaKeyPressed
+
+    private void VHtrabalhadaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VHtrabalhadaKeyTyped
+       String caracteres = "0123456789.";
+        if(!caracteres.contains(evt.getKeyChar()+"")){
+        evt.consume();
+    }
+    }//GEN-LAST:event_VHtrabalhadaKeyTyped
+
+    private void HtrabalhadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HtrabalhadaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HtrabalhadaActionPerformed
+
+    private void HtrabalhadaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_HtrabalhadaKeyTyped
+         String caracteres = "0123456789.";
+        if(!caracteres.contains(evt.getKeyChar()+"")){
+        evt.consume();
+    }
+    }//GEN-LAST:event_HtrabalhadaKeyTyped
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        jPanel2.setVisible(true);
+        jPanel1.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -314,14 +375,18 @@ public class cadastro extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField Htrabalhada;
     private javax.swing.JTextField Nome;
     private javax.swing.JFormattedTextField VHtrabalhada;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel label;
     // End of variables declaration//GEN-END:variables
