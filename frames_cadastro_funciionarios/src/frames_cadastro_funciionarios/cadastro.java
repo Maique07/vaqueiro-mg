@@ -72,7 +72,7 @@ public class cadastro extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Serif", 3, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 255, 51));
         jLabel1.setText("CADASTRO DE FUNCIONÁRIOS");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 360, 50));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 360, 50));
 
         jButton1.setFont(new java.awt.Font("Segoe UI Emoji", 3, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 255, 0));
@@ -84,13 +84,13 @@ public class cadastro extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 110, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, 110, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/figuras/fundo_vermelho.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/figuras/3ee57e5e-4b7b-4169-95a1-b1c9d6241f5d.jpg"))); // NOI18N
         jLabel2.setAutoscrolls(true);
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 300));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 430));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 360));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 440));
 
         jPanel2.setMinimumSize(new java.awt.Dimension(500, 370));
         jPanel2.setPreferredSize(new java.awt.Dimension(400, 300));
@@ -98,7 +98,7 @@ public class cadastro extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Rod", 2, 14)); // NOI18N
         jLabel3.setText("Nome:");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
 
         Nome.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Nome.addActionListener(new java.awt.event.ActionListener() {
@@ -111,7 +111,7 @@ public class cadastro extends javax.swing.JFrame {
                 NomeKeyPressed(evt);
             }
         });
-        jPanel2.add(Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 210, 30));
+        jPanel2.add(Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 210, 30));
 
         D_admissao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         try {
@@ -124,11 +124,11 @@ public class cadastro extends javax.swing.JFrame {
                 D_admissaoKeyPressed(evt);
             }
         });
-        jPanel2.add(D_admissao, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 210, 30));
+        jPanel2.add(D_admissao, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 210, 30));
 
         jLabel4.setFont(new java.awt.Font("Rod", 2, 14)); // NOI18N
         jLabel4.setText("Data de admissão");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Rod", 2, 14)); // NOI18N
         jLabel5.setText("Valor da hora trabalhada: ");
@@ -136,7 +136,7 @@ public class cadastro extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Rod", 2, 14)); // NOI18N
         jLabel6.setText("Horas trabalhadas: ");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, -1, -1));
 
         jButton2.setText("x");
         jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -147,11 +147,11 @@ public class cadastro extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 10, 50, 20));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, 50, 20));
 
         jLabel7.setFont(new java.awt.Font("Serif", 3, 18)); // NOI18N
         jLabel7.setText("GRUPO VMG");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, 140, 60));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 140, 60));
 
         jButton3.setText("IMPRIMIR");
         jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -171,7 +171,7 @@ public class cadastro extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, 80, -1));
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 80, -1));
 
         Htrabalhada.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Htrabalhada.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
@@ -188,7 +188,7 @@ public class cadastro extends javax.swing.JFrame {
                 HtrabalhadaKeyTyped(evt);
             }
         });
-        jPanel2.add(Htrabalhada, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 210, 30));
+        jPanel2.add(Htrabalhada, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 210, 30));
 
         VHtrabalhada.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -198,12 +198,12 @@ public class cadastro extends javax.swing.JFrame {
                 VHtrabalhadaKeyTyped(evt);
             }
         });
-        jPanel2.add(VHtrabalhada, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 202, 210, 30));
+        jPanel2.add(VHtrabalhada, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 210, 30));
 
-        label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/figuras/963af6f211b6ba045df6dbacabc24b55.jpg"))); // NOI18N
-        jPanel2.add(label, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 380));
+        label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/figuras/9fc641d1-6fa7-42c0-8c1d-0ca8db8faf3f.jpg"))); // NOI18N
+        jPanel2.add(label, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 430));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 360));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
