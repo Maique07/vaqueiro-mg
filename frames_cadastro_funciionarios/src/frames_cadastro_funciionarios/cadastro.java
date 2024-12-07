@@ -31,8 +31,8 @@ public class cadastro extends javax.swing.JFrame {
         setResizable(false);
         jPanel2.setVisible(false);
         jPanel1.setVisible(true);
-
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -70,12 +70,12 @@ public class cadastro extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Serif", 3, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 255, 51));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CADASTRO DE FUNCIONÁRIOS");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 360, 50));
 
         jButton1.setFont(new java.awt.Font("Segoe UI Emoji", 3, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 255, 0));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("COMEÇAR ");
         jButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jButton1.setContentAreaFilled(false);
@@ -96,7 +96,8 @@ public class cadastro extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(400, 300));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Rod", 2, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Rod", 2, 16)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nome:");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
 
@@ -126,17 +127,20 @@ public class cadastro extends javax.swing.JFrame {
         });
         jPanel2.add(D_admissao, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 130, 210, 30));
 
-        jLabel4.setFont(new java.awt.Font("Rod", 2, 14)); // NOI18N
-        jLabel4.setText("Data de admissão");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, -1, -1));
+        jLabel4.setFont(new java.awt.Font("Rod", 2, 16)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Data de admissão:");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Rod", 2, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Rod", 2, 16)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Valor da hora trabalhada: ");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
 
-        jLabel6.setFont(new java.awt.Font("Rod", 2, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Rod", 2, 16)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Horas trabalhadas: ");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, -1, -1));
 
         jButton2.setText("x");
         jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -149,10 +153,12 @@ public class cadastro extends javax.swing.JFrame {
         });
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, 50, 20));
 
-        jLabel7.setFont(new java.awt.Font("Serif", 3, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Serif", 3, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("GRUPO VMG");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 140, 60));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 210, 60));
 
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("IMPRIMIR");
         jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton3.setContentAreaFilled(false);
@@ -161,8 +167,9 @@ public class cadastro extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, 70, -1));
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, 80, -1));
 
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("SALVAR");
         jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jButton4.setContentAreaFilled(false);
@@ -190,6 +197,7 @@ public class cadastro extends javax.swing.JFrame {
         });
         jPanel2.add(Htrabalhada, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 210, 30));
 
+        VHtrabalhada.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         VHtrabalhada.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 VHtrabalhadaKeyPressed(evt);
@@ -308,7 +316,9 @@ public class cadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_HtrabalhadaKeyPressed
 
     private void VHtrabalhadaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VHtrabalhadaKeyPressed
-        
+      if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            Htrabalhada.requestFocus();
+        }        
     }//GEN-LAST:event_VHtrabalhadaKeyPressed
 
     private void VHtrabalhadaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VHtrabalhadaKeyTyped
